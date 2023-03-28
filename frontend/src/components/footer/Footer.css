@@ -1,0 +1,100 @@
+footer {
+    margin-top: 10.4vh;
+    padding: 1.1vh 3.2vh;
+    font-family: "NHaasGroteskDSPro-55Rg";
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 3.2vh;
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 0.1vh solid #363636;
+    padding: 1.1vh 3.2vh;
+}
+
+.footer-bottom img {
+    width: 20.5vh;
+}
+
+footer nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+footer nav ul a {
+    color: #1f1f1f;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.75vh;
+}
+
+footer nav li {
+    margin-top: 8px;
+}
+
+.footer-newsletter {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-newsletter h1 {
+    font-weight: 500;
+    font-size: 2.4vh;
+    margin: 0;
+    margin-top: 2.1vh;
+}
+
+.footer-newsletter div {
+    font-size: 1.7vh;
+    margin: 1.1vh 0;
+}
+
+.footer-newsletter input {
+    width: 80%;
+    padding: 1.1vh;
+    border: 0.1vh solid #b4b4b4;
+    margin-bottom: 1.1vh;
+}
+
+.footer-newsletter button {
+    width: 50%;
+    padding: 1.1vh 0.5vh;
+    cursor: pointer;
+    background-color: #363636;
+    border: none;
+    text-transform: uppercase;
+    color: #dadada;
+    font-size: 1.6vh;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .footer-top {
+        flex-direction: column;
+        padding: 1.1vh;
+    }
+
+    .footer-newsletter input {
+        min-width: 100%;
+        width: 100%;
+    }
+
+    .footer-newsletter button {
+        min-width: 100%;
+        width: 100%;
+    }
+
+    .footer-bottom {
+        padding: 1.1vh;
+    }
+
+}

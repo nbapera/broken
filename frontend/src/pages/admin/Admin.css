@@ -1,0 +1,128 @@
+.admin h1 {
+    text-align: center;
+}
+
+.users-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-icon {
+    color: #eeeeee;
+}
+
+.admin-sizes input {
+    width: 5.3vh;
+    margin-right: 0.1vh;
+}
+
+.user {
+    padding: 3.2vh 50.5vh;
+    border-radius: 1.7vh;
+    background-color: #171717;
+    color: #eeeeee;
+    font-size: 2.6vh;
+    text-align: center;
+}
+
+.admin-products {
+    padding: 5.3vh 6.5vh;
+}
+
+.admin-products h1 {
+    text-align: left;
+    font-weight: 600;
+}
+
+.add-product {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.add-product input,
+.add-product select {
+    margin-top: 2.1vh;
+}
+
+.admin-products button {
+    margin-top: 2.1vh;
+    cursor: pointer;
+    border: none;
+    background-color: #171717;
+    color: #eeeeee;
+    font-size: 1.7vh;
+    padding: 1.1vh 3.2vh;
+}
+
+.admin-products-remove {
+    padding: 5.3vh 6.5vh;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.mini-product {
+    display: flex;
+    border-radius: 1.7vh;
+    margin-right: 5.3vh;
+    width: fit-content;
+    height: 10.4vh;
+    background-color: #121212;
+    align-items: center;
+
+}
+
+.prod-img {
+    margin: 1.1vh;
+    width: 8.3vh;
+    height: 8.3vh;
+    background-color: #fff;
+    border-radius: 1.7vh;
+}
+
+.prod-text {
+    color: #fff;   
+}
+
+.prod-content p {
+    margin-top: 0.5vh;
+    margin-bottom: 0;
+    color: #fff;
+}
+
+.mini-product button {
+    cursor: pointer;
+    height: 50%;
+    margin-left: 2.1vh;
+    width: 10.4vh;
+    border: none;
+    background-color: #3f3f3f;
+    color: #fff;
+    font-size: 1.6vh;
+    border-radius: 1.1vh;
+    margin-right: 1.4vh;
+}
+
+.admin-collections {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-collections input {
+    margin: 5.3vh 6.5vh;
+    width: 20%;
+    outline: none;
+}
+
+.admin-collections button {
+    width: 5%;
+    cursor: pointer;
+    border: none;
+    background-color: #171717;
+    color: #eeeeee;
+    font-size: 1.7vh;
+    padding: 1.1vh 3.2vh;
+    margin-left: 6.5vh;
+}

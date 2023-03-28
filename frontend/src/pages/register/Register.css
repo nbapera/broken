@@ -1,0 +1,79 @@
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+
+.register {
+    margin-top: 10.4vh;
+    text-align: center;
+    width: 23%;
+}
+
+.register h1 {
+    font-weight: 600;
+}
+
+.register-inputs {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.register-inputs input {
+    margin-bottom: 3.2vh;
+    margin-top: 1.1vh;
+}
+
+.register-inputs label {
+    font-weight: bold;
+}
+
+.register-inputs input {
+    outline: none;
+    padding: .8em 1.6vh;
+    background: #ffffff;
+    color: #171717;
+    border: 0.1vh solid #c5c5c5;
+    border-bottom: 0.2vh solid #c5c5c5;
+    font-size: 1.6vh;
+    transition: 0.4s;
+}
+
+.forgot-password {
+    display: flex;
+    margin-bottom: 2.1vh;
+    color: #171717;
+    text-decoration: none;
+}
+
+.register-flex {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+}
+
+.register-flex a {
+    color: #171717;
+    text-decoration: none;
+}
+
+.login-flex button {
+    cursor: pointer;
+    background-color: #363636;
+    border: none;
+    text-transform: uppercase;
+    color: #dadada;
+    padding: 1.6vh 2.6vh;
+    font-size: 1.6vh;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .register {
+        width: 80%;
+    }
+
+}

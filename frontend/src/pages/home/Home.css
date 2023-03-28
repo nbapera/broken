@@ -1,0 +1,74 @@
+.home {
+
+}
+
+.home-banner {
+    margin-bottom: 10.4vh;
+}
+
+.home-img {
+    font-size: 5.3vh;
+    font-weight: bold;
+    width: 100vw;
+    height: 120vh;
+    background-image: url("home_img.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.home-sellers-container {
+    text-align: center;
+    margin-top: 2.1vh;
+}
+
+.home-sellers-container h1 {
+    font-family: "NHaasGroteskDSPro-55Rg";
+    font-size: 2.4vh;
+}
+
+.home-sellers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.mission {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.mission-cnt {
+    width: 48%;
+}
+
+.mission-cnt h1 {
+    font-size: 4.7vh;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.mission-cnt div {
+    font-size: 2vh;
+}
+
+@media screen and (max-width: 1000px) {
+    .home-banner {
+        display: none;
+    }
+
+    .mission-cnt {
+        width: 90%;
+    }
+
+    .mission-cnt h1 {
+        font-size: 30px;
+    }
+
+    .mission-cnt div {
+        font-size: 19px;
+    }
+
+}

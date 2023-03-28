@@ -1,0 +1,13 @@
+.notfound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10.4vh;
+    width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+    .notfound div {
+        width: 90% !important;
+    }
+}

@@ -1,0 +1,10 @@
+.sizeguide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sizeguide img {
+    width: 40%;
+    margin-top: 60px;
+}

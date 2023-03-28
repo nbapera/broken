@@ -1,0 +1,17 @@
+.collection {
+    text-align: center;
+    margin-top: 2.1vh;
+}
+
+.collection h1 {
+    font-family: "NHaasGroteskDSPro-55Rg";
+    font-size: 2.4vh;
+}
+
+.collection-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+

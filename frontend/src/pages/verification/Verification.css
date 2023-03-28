@@ -1,0 +1,34 @@
+.verify-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.verification {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.verification-icon {
+    font-size: 10.4vh;
+}
+
+.verification h1 {
+    font-weight: 400;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .verification img {
+        margin-top: 10.4vh;
+        width: 70%;
+    }
+
+    .verification h1 {
+        text-align: center;
+    }
+
+}
