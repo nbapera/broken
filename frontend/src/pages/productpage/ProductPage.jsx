@@ -121,7 +121,7 @@ const ProductPage = ({ dispatch }) => {
         window.location.href="/"
       }
 
-      axios.get(`http://178.148.119.105:5000/product/${name}`)
+      axios.get(`https://bkneg.site/product/${name}`)
       .then(res => {
         if (res.data.status === 'ok') {
           setName(res.data.name)

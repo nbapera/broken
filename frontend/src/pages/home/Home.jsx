@@ -50,7 +50,7 @@ const Home = () => {
   const [loading, setLoading] = useState(sessionStorage.getItem('loaded') ? false : true)
 
   useEffect(() => {
-    axios.get(`http://178.148.119.105:5000/featured-products`)
+    axios.get(`https://bkneg.site/featured-products`)
     .then(res => {
       if (res.data.status === 'ok') {
         if (res.data.product) {

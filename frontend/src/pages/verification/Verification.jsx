@@ -18,7 +18,7 @@ const Verification = () => {
     const [verified, setVerified] = useState(false)
 
     useEffect(() => {
-        axios.get(`http://178.148.119.105:5000/verify/${token}`, {headers: {'Authorization': localStorage.getItem('token')}})
+        axios.get(`https://bkneg.site/verify/${token}`, {headers: {'Authorization': localStorage.getItem('token')}})
         .then(res => {
             if (res.data.status === 'ok') {
                 setVerified(true)

@@ -14,7 +14,7 @@ const Cart = () => {
   const [subtotal, setSubtotal] = useState(0)
 
   useEffect(() => {
-    axios.post("http://178.148.119.105:5000/cart", {items})
+    axios.post("https://bkneg.site/cart", {items})
     .then(res => {
       if (res.data.status === 'ok') {
         setProducts(res.data.products)

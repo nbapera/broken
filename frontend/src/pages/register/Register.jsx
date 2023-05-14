@@ -52,7 +52,7 @@ const Register = () => {
       return
     }
 
-    axios.post('http://178.148.119.105:5000/register', {firstname, lastname, email, password})
+    axios.post('https://bkneg.site/register', {firstname, lastname, email, password})
     .then(res => {
       if (res.data.status === 'ok') {
         localStorage.setItem('token', res.data.token)

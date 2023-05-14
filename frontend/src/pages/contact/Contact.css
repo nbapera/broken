@@ -1,0 +1,47 @@
+.contact-cnt {
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-cnt input, .contact-cnt textarea {
+    width: 20%;
+    margin: 10px 0;
+    padding: 10px 20px;
+    border-radius: 100px;
+    border: none;
+}
+
+.contact-cnt input {
+    outline: none;
+}
+
+.contact-cnt textarea {
+    padding: 20px 20px;
+    border-radius: 20px;
+    resize: none;
+    outline: none;
+    height: 30%;
+}
+
+.input-button {
+    cursor: pointer;
+    background-color: #121212;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+.input-button:hover {
+    background-color: #303030;
+    transition: 0.4s;
+}
+
+@media screen and (max-width: 1000px) {
+    .contact-cnt input, .contact-cnt textarea {
+        width: 80%;
+    }
+}

@@ -16,7 +16,7 @@ const Account = () => {
     const [error, setError] = useState("")
 
     const handleSubmit = () => {
-        axios.post('http://178.148.119.105:5000/reset-password', {current, newPassword}, {headers: {'Authorization': localStorage.token}})
+        axios.post('https://bkneg.site/reset-password', {current, newPassword}, {headers: {'Authorization': localStorage.token}})
         .then(res => {
             if (res.data.status === 'ok') {
                 localStorage.setItem('token', res.data.token)
@@ -39,7 +39,7 @@ const Account = () => {
             window.location.href = "/account/login"
         }
 
-        axios.get('http://178.148.119.105:5000/account', {headers: {'Authorization': localStorage.getItem('token')}})
+        axios.get('https://bkneg.site/account', {headers: {'Authorization': localStorage.getItem('token')}})
         .then(res => {
             if (res.data.status === 'ok') {
                 setVerified(true)

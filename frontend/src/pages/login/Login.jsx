@@ -33,7 +33,7 @@ const Login = () => {
       return
     }
 
-    axios.post('http://178.148.119.105:5000/login', { email, password })
+    axios.post('https://bkneg.site/login', { email, password })
     .then(res => {
       if (res.data.status === 'ok') {
         localStorage.setItem('token', res.data.token)

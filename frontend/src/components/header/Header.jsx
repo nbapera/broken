@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faBagShopping, faBell, faBars, faX } from '@fortawesome/free-solid-svg-icons'
 import { faTiktok, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import axios from 'axios'
 
 import all_img from './all_img.jpeg'
@@ -43,7 +43,7 @@ const Header = ({ fade }) => {
     const [collections, setCollections] = useState([])
 
     useEffect(() => {
-        axios.get('http://178.148.119.105:5000/collections')
+        axios.get('https://bkneg.site/collections')
         .then(res => {
             if (res.data.status === 'ok') {
                 setCollections(res.data.collections)
@@ -91,81 +91,83 @@ const Header = ({ fade }) => {
     const Collections = ({ onMouseOver, onMouseOut }) => {
 
         return (
-            <motion.div
-            className="collections" 
-            onMouseOver={onMouseOver} 
-            onMouseOut={onMouseOut}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}>
-                <div className="about-flex">
-                    <div className="about-left">
-                        <nav>
-                            <ul>
-                                <li><a href="/collection/All">ALL</a></li>
-
-
-                                {collections.map(collection =>
-                                   <li><a href={`/collection/${collection.name}`}>{collection.name}</a></li>
-                                )}
-
-                            </ul>
-                        </nav>
-                    </div>
-                    <div className="about-right">
-                        <a href={`/collection/All`} className="about-img-container">
-                            <img className="about-img" src={all_img}></img>
-                            <div className="about-text">All</div>
-                        </a>
-                        <a href={`/collection/${collections[1].name}`} className="about-img-container">
-                            <img className="about-img" src={rings}></img>
-                            <div className="about-text">{collections[1] ? collections[1].name : null}</div>
-                        </a>
-                        <a href={`/collection/${collections[2].name}`} className="about-img-container">
-                            <img className="about-img" src={fragrance}></img>
-                            <div className="about-text">{collections[2] ? collections[2].name : null}</div>
-                        </a>
-                    </div>
-                </div>
-            </motion.div>
-        )
-    }
-    
-    const About = ({ onMouseOver, onMouseOut }) => {
-        return (
-            <motion.div 
-                className="about"
+                <motion.div
+                className="collections" 
                 onMouseOver={onMouseOver} 
                 onMouseOut={onMouseOut}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}>
-                <div className="about-flex">
-                    <div className="about-left">
-                        <nav>
-                            <ul>
-                                <li><a href="/faq">FAQ'S</a></li>
-                                <li><a href="/">CONTACT</a></li>
-                                <li><a href="/sizeguide">SIZE GUIDE</a></li>
-                            </ul>
-                        </nav>
+                    <div className="about-flex">
+                        <div className="about-left">
+                            <nav>
+                                <ul>
+                                    <li><a href="/collection/All">ALL</a></li>
+
+
+                                    {collections.map(collection =>
+                                    <li><a href={`/collection/${collection.name}`}>{collection.name}</a></li>
+                                    )}
+
+                                </ul>
+                            </nav>
+                        </div>
+                        <div className="about-right">
+                            <a href={`/collection/All`} className="about-img-container">
+                                <img className="about-img" src={all_img}></img>
+                                <div className="about-text">All</div>
+                            </a>
+                            {collections[1] && collections[2] ? 
+                            <><a href={`/collection/${collections[1].name}`} className="about-img-container">
+                                <img className="about-img" src={rings}></img>
+                                <div className="about-text">{/*collections[1] ? collections[1].name : null*/}</div>
+                            </a>
+                            <a href={`/collection/${collections[2].name}`} className="about-img-container">
+                                <img className="about-img" src={fragrance}></img>
+                                <div className="about-text">{collections[2] ? collections[2].name : null}</div>
+                            </a></> : null}
+                        </div>
                     </div>
-                    <div className="about-right">
-                        <a href="/faq" className="about-img-container">
-                            <img className="about-img" src={faq_img}></img>
-                            <div className="about-text">FAQ'S</div>
-                        </a>
-                        <a href="/"  className="about-img-container">
-                            <img className="about-img" src={contact_img}></img>
-                            <div className="about-text">CONTACT</div>
-                        </a>
-                        <a href="/sizeguide" className="about-img-container">
-                            <img className="about-img" src={sizeguide_dm}></img>
-                            <div className="about-text">SIZE GUIDE</div>
-                        </a>
+                </motion.div>
+        )
+    }
+    
+    const About = ({ onMouseOver, onMouseOut }) => {
+        return (
+            
+                <motion.div 
+                    className="about"
+                    onMouseOver={onMouseOver} 
+                    onMouseOut={onMouseOut}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}>
+                    <div className="about-flex">
+                        <div className="about-left">
+                            <nav>
+                                <ul>
+                                    <li><a href="/faq">FAQ'S</a></li>
+                                    <li><a href="/contact">CONTACT</a></li>
+                                    <li><a href="/sizeguide">SIZE GUIDE</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div className="about-right">
+                            <a href="/faq" className="about-img-container">
+                                <img className="about-img" src={faq_img}></img>
+                                <div className="about-text">FAQ'S</div>
+                            </a>
+                            <a href="/"  className="about-img-container">
+                                <img className="about-img" src={contact_img}></img>
+                                <div className="about-text">CONTACT</div>
+                            </a>
+                            <a href="/sizeguide" className="about-img-container">
+                                <img className="about-img" src={sizeguide_dm}></img>
+                                <div className="about-text">SIZE GUIDE</div>
+                            </a>
+                        </div>
                     </div>
-                </div>
-            </motion.div>
+                </motion.div>
         )
     }
 

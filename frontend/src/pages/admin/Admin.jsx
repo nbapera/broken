@@ -58,7 +58,7 @@ const Admin = () => {
             window.location.href = "/account/login"
         }
 
-        axios.get('http://178.148.119.105:5000/admin', {headers: {'Authorization': localStorage.token}})
+        axios.get('https://bkneg.site/admin', {headers: {'Authorization': localStorage.token}})
         .then(res => {
             if (res.data.status === 'ok') {
                 setAdmin(true)
@@ -76,7 +76,7 @@ const Admin = () => {
             fnArray.push(file[i].name)
         }
 
-        axios.post('http://178.148.119.105:5000/add-product',
+        axios.post('https://bkneg.site/add-product',
         { name, price, quantity, sizes: sizeArray, color: colorArray, collection: collection.toString(), featured, filenames: fnArray },
         {headers: {'Authorization': localStorage.token}})
         .then(res => {
@@ -91,7 +91,7 @@ const Admin = () => {
             const data = new FormData()
             data.append('file', file[i], file[i].name)
 
-            axios.post('http://178.148.119.105:5000/product-image',
+            axios.post('https://bkneg.site/product-image',
             data, 
             {headers: {'Authorization': localStorage.token, "Content-Type": "multipart/form-data"}})
             .then(res => {
@@ -133,7 +133,7 @@ const Admin = () => {
     }
 
     const removeProduct = (name) => {
-        axios.get(`http://localhost:5000/remove-product/${name}`, {headers: {'Authorization': localStorage.token}})
+        axios.get(`https://bkneg.site/remove-product/${name}`, {headers: {'Authorization': localStorage.token}})
         .then(res => {
             if (res.data.status === 'ok') {
                 window.location.reload()
@@ -142,7 +142,7 @@ const Admin = () => {
     }
 
     const removeCollection = (name) => {
-        axios.get(`http://178.148.119.105:5000/remove-collection/${name}`, {headers: {'Authorization': localStorage.token}})
+        axios.get(`https://bkneg.site/remove-collection/${name}`, {headers: {'Authorization': localStorage.token}})
         .then(res => {
             if (res.data.status === 'ok') {
                 alert('Collection removed')
@@ -176,7 +176,7 @@ const Admin = () => {
     }
 
     const addCollection = (name) => {
-        axios.get(`http://178.148.119.105:5000/add-collection/${name}`, {headers: {'Authorization': localStorage.token}})
+        axios.get(`https://bkneg.site/add-collection/${name}`, {headers: {'Authorization': localStorage.token}})
         .then(res => {
             if (res.data.status === 'ok') {
                 alert('Collection added')

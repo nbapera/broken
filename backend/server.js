@@ -663,4 +663,41 @@ app.get('/order/:id', async (req, res) => {
 
 })
 
+app.post('/contact', async(req, res) => {
+    const { name, email, message } = req.body
+
+    if (!name || !email || !message) {
+        return res.json({status: 'error'})
+    }
+
+    let transporter = nodemailer.createTransport({
+        host: 'smtpout.secureserver.net',
+        port: 465,
+        secure: true,
+        secureConnection: false,
+        tls: {
+            ciphers:'SSLv3'
+        },
+        auth: {
+          user: 'help@bkneg.com',
+          pass: 'theredeye123YY',
+        },
+        send: true
+      });
+    
+      let info = await transporter.sendMail({
+        from: 'help@bkneg.com',
+        to: 'help@bkneg.com',
+        subject: `Contact Inquiry, ${name}`,
+        text: message,
+      });
+    
+      console.log("Message sent: %s", info.messageId);
+    
+      console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+
+      return res.json({status: 'ok'})
+
+})
+
 app.listen(5000, () => console.log('started'))

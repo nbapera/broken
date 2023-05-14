@@ -13,7 +13,7 @@ const Collection = () => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        axios.get(`http://178.148.119.105:5000/collection/${name}`)
+        axios.get(`https://bkneg.site/collection/${name}`)
         .then(res => {
             if (res.data.status === 'ok') {
                 setProducts(res.data.products)

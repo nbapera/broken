@@ -35,7 +35,7 @@ const Checkout = () => {
     const [link, setLink] = useState("")
 
     useEffect(() => {
-        axios.post("http://178.148.119.105:5000/cart", {items})
+        axios.post("https://bkneg.site/cart", {items})
         .then(res => {
           if (res.data.status === 'ok') {
             setProducts(res.data.products)
@@ -76,7 +76,7 @@ const Checkout = () => {
 
         console.log({ billingData })
 
-        axios.post('http://178.148.119.105:5000/checkout', {amount: subtotal * 100 * 32.51, billing_data: billingData})
+        axios.post('https://bkneg.site/checkout', {amount: subtotal * 100 * 32.51, billing_data: billingData})
         .then(res => {
           setLink(res.data.link)
         })

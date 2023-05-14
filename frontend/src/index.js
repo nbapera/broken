@@ -17,7 +17,7 @@ import Verification from './pages/verification/Verification';
 import SizeGuide from './pages/sizeguide/SizeGuide';
 import PrivacyPolicy from './pages/privacypolicy/PrivacyPolicy';
 import TermsOfService from './pages/termsofservice/TermsOfService';
-
+import Contact from './pages/contact/Contact';
 
 import './index.css';
 
@@ -45,6 +45,7 @@ root.render(
           <Route path="/sizeguide" element={<SizeGuide />} />
           <Route path="/pp" element={<PrivacyPolicy />} />
           <Route path="/tos" element={<TermsOfService />} />
+          <Route path="/contact" element={<Contact />}/>
 
           <Route path="/verify/:token" element={<Verification />} />
 
